@@ -10,12 +10,6 @@ jobs:
         with:
           repository: msanchez-calimaco/tf-wordpress-infrastructure
           path: production
-        run: |
-          pwd
-          ls -a
-          echo $GITHUB_SHA
-          echo $GITHUB_REPOSITORY
-          echo $GITHUB_WORKSPACE
           echo "${{ github.token }}"
       - name: List Files 
         run: |

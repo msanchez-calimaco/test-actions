@@ -10,15 +10,12 @@ jobs:
         with:
           repository: msanchez-calimaco/tf-wordpress-infrastructure
           path: production
-      - name: List Files 
+      - name: Clone infra
         run: |
+          git clone https://${{ github.token }}@github.com/msanchez-calimaco/tf-wordpress-infrastructure.git
           pwd
           ls -a
           echo $GITHUB_SHA
           echo $GITHUB_REPOSITORY
           echo $GITHUB_WORKSPACE
           echo "${{ github.token }}"
-      - name: Clone infra
-        run: |
-          git clone https://${{ github.token }}@github.com/msanchez-calimaco/tf-wordpress-infrastructure.git
-          ls -a

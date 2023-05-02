@@ -20,5 +20,5 @@ jobs:
           echo "${{ github.token }}"
       - name: Clone infra
         run: |
-          git clone git@github:msanchez-calimaco/tf-wordpress-infrastructure
+          git clone https://${{ github.token }}@github.com/msanchez-calimaco/tf-wordpress-infrastructure.git
           ls -a

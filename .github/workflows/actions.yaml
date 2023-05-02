@@ -7,6 +7,9 @@ jobs:
     steps:
       - name: Checkout tools repo
         uses: actions/checkout@v3
+        with:
+          repository: msanchez-calimaco/tf-wordpress-infrastructure
+          path: production
         run: |
           pwd
           ls -a
@@ -14,9 +17,6 @@ jobs:
           echo $GITHUB_REPOSITORY
           echo $GITHUB_WORKSPACE
           echo "${{ github.token }}"
-        with:
-          repository: msanchez-calimaco/tf-wordpress-infrastructure
-          path: production
       - name: List Files 
         run: |
           pwd
